@@ -1,0 +1,114 @@
+@mixin maxBp($point) {
+    @media only screen and (max-width: #{$point - 1}px) {
+        @content;
+    }
+}
+
+@mixin reset-list($padding: 0, $margin: 0) {
+    padding: $padding;
+    margin: $margin;
+    list-style: none;
+}
+
+
+@mixin text-h1 {
+    font-family: var(--font-family-1);
+    font-size: var(--text-h1-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: none;
+}
+
+@mixin text-h2 {
+    font-family: var(--font-family-1);
+    font-size: var(--text-h2-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    text-transform: none;
+}
+
+@mixin text-h3 {
+    font-family: var(--font-family-1);
+    font-size: var(--text-h3-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: none;
+}
+
+@mixin text-h4 {
+    font-family: var(--font-family-2);
+    font-size: var(--text-h4-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: none;
+}
+
+
+@mixin text-h5 {
+    font-family: var(--font-family-1);
+    font-size: var(--text-h5-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: none;
+}
+
+@mixin text-number {
+    font-family: var(--font-family-1);
+    font-size: var(--text-number-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: none;
+}
+
+@mixin text-txt {
+    font-family: var(--font-family-2);
+    font-size: var(--text-txt-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: none;
+}
+
+@mixin text-txt2 {
+    font-family: var(--font-family-2);
+    font-size: var(--text-txt2-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: none;
+}
+
+@mixin text-txt-menu {
+    font-family: var(--font-family-2);
+    font-size: var(--text-txt-menu-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 48px;
+    text-transform: none;
+}
+
+@mixin text-big {
+    font-family: var(--font-family-1);
+    font-size: var(--text-big-size);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    text-transform: none;
+}
+
+
+@mixin text-subtitle {
+    font-family: var(--font-family-1);
+    font-size: var(--text-txt2-size);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 8%;
+}

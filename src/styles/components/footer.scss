@@ -1,0 +1,225 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.footer{
+	padding: 20px;
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background: linear-gradient(0deg, #C2D2F4, #C2D2F4), linear-gradient(0deg, #B7C6E7, #B7C6E7);
+	}
+}
+
+.footer__bottom {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas:"decoration decoration decoration"
+						"copyright author policy";
+	align-items: center;
+
+	@include mixins.maxBp(constants.$bp-768) {
+		grid-template-columns: 1fr;
+		grid-template-areas:"policy"
+							"copyright"
+							"decoration"
+							"author";
+							
+		// flex-direction: column;
+		gap: 20px;
+		// align-items: flex-start;
+	}
+}
+
+.footer__bottom-title {
+	grid-area: decoration;
+	position: relative;
+	color: var(--color-l-blue);
+	text-align: center;
+	margin-bottom: 20px;
+	padding-bottom: 24px;
+
+	span {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		background-color: var(--page-bc);
+		padding-left: 8px;
+		padding-right: 8px;
+
+		// @include mixins.maxBp(constants.$bp-768) {
+		// 	left: 0;
+		// 	transform: translate3d(0, -50%, 0);
+		// 	padding-left: 0;
+		// 	padding-right: 8px;
+		// }
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background: linear-gradient(0deg, #C2D2F4, #C2D2F4), linear-gradient(0deg, #B7C6E7, #B7C6E7);
+		transform: translate3d(0, -50%, 0);
+		z-index: 0;
+	} 
+
+	@include mixins.maxBp(constants.$bp-768) {
+		order: 2;
+	}
+}
+
+
+.footer__copyright {
+	grid-area: copyright;
+	justify-self: center;
+	@include mixins.text-txt2;
+	@include mixins.maxBp(constants.$bp-768) {
+		justify-self: start;
+	}
+
+}
+
+.footer__author-logo {
+	grid-area: author;
+    width: 85px;
+	justify-self: center;
+	@include mixins.maxBp(constants.$bp-768) {
+		width: 64px;
+		justify-self: start;
+	}
+}
+
+.footer__policy {
+	grid-area: policy;
+    @include mixins.text-txt2;
+	display: flex;
+	gap: 13px;
+	align-items: center;;
+	justify-self: center;
+	@include mixins.maxBp(constants.$bp-768) {
+		justify-self: start;
+	}
+}
+
+.footer__top {
+	display: grid;
+	grid-template-columns:240px 200px 200px 232px ;
+	grid-template-areas: "about menu services contact";
+	gap: 20px;
+	justify-content: space-between;
+
+	@include mixins.maxBp(constants.$bp-1024) {
+		grid-template-areas:"about about"
+							"menu services"
+							"contact contact";
+	}
+
+}
+
+.footer__title {
+	@include mixins.text-subtitle;
+	padding-bottom: 9px;
+	max-width: 200px;
+
+}
+.footer__title--decoration {
+	position: relative;
+	&::after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		height: 2px;
+		width: 100%;
+		background: linear-gradient(0deg, #C2D2F4, #C2D2F4), linear-gradient(0deg, #B7C6E7, #B7C6E7);
+	}
+}
+.footer__title--ml {
+	margin-left: 60px;
+}
+
+.footer__contact {
+	grid-area: contact;
+	display: flex;
+	flex-direction: column;
+}
+
+.footer__services {
+	grid-area: services;
+}
+
+.footer__menu {
+	grid-area: menu;
+}
+
+.footer__social-list {
+	@include mixins.reset-list;
+	display: flex;
+	gap: 24px;
+	flex-wrap: wrap;
+}
+
+.footer__phone {
+	font-family: var(--font-family-1);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: none;
+	margin-bottom: 20px;
+}
+
+
+.footer__menu-list {
+	@include mixins.reset-list;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.footer__about {
+	grid-area: about;
+}
+
+.footer__about-info {
+	display: flex;
+	gap: 16px;
+
+	svg {
+		min-width: 44px;
+		max-width: 44px;
+	}
+
+	p {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.footer__address {
+	--line-height: 24px;
+	display: flex;
+	gap: 10px;
+	max-width: 210px;
+	line-height: var(--line-height);
+	margin-bottom: 30px;
+
+	svg {
+		min-width: 12px;
+		max-width: 12px;
+		height: var(--line-height);
+	}
+}
+
+
+

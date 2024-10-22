@@ -1,13 +1,13 @@
-import { ReactNode } from "react";
+// import { ReactNode } from "react";
 import './style.scss';
 
-interface Props {
-	children?: ReactNode,
-	header?: string,
-	footer?: boolean,
-}
+// interface Props {
+// 	children?: ReactNode,
+// 	header?: string,
+// 	footer?: boolean,
+// }
 
-function Menu({ header, footer, children }: Props) {
+function Menu() {
   return (
     <ul className='Menu'>
 		<li>About company</li>

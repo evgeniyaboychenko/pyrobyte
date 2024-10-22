@@ -1,1 +1,16 @@
-@forward './service/index';
+// @use  './service' as *;
+// @use  './service/mixins' as mixins;
+@forward './service';
+@forward './components';
+
+// .Footer-Bottom {
+// 	display: flex;
+// 	justify-content: space-between;
+// 	align-items: center;
+
+// 	@include mixins.maxBp($bp-768) {
+// 		flex-direction: column;
+// 		gap: 20px;
+
+// 	}
+// }
