@@ -12,6 +12,7 @@
 		height: 2px;
 		width: 100%;
 		background: linear-gradient(0deg, #C2D2F4, #C2D2F4), linear-gradient(0deg, #B7C6E7, #B7C6E7);
+		// border: 1px solid rgba(43, 107, 243, 1)
 	}
 }
 
@@ -38,6 +39,7 @@
 .footer__bottom-title {
 	grid-area: decoration;
 	position: relative;
+	z-index: 0;
 	color: var(--color-l-blue);
 	text-align: center;
 	margin-bottom: 20px;

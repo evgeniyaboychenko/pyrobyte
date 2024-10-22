@@ -1,0 +1,65 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.btn {
+	--btn-px: 0;
+    --btn-py: 0;
+    --btn-bg: transparent;
+    --btn-bdc:  transparent;
+    --btn-bdrs: 0;
+    --btn-c: #999999;
+
+    @include mixins.text-txt;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--btn-py) var(--btn-px);
+    overflow: hidden;
+    color: var(--btn-c);
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--btn-bg);
+    border: none;
+    border-radius: var(--btn-bdrs);
+	transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    
+	&:hover {
+		opacity: 0.7;
+    }
+}
+
+.btn--reset {
+	border: none;
+	border-radius: 0;
+	background-color: transparent;
+	color: inherit;
+}
+
+.btn--secondary {
+	--btn-px: 10px;
+    --btn-py: 5px;
+    --btn-bg: var(--color-yellow);
+    --btn-bdc:  transparent;
+    --btn-bdrs: 32px;
+    --btn-c: var(--color-black);
+
+	&:hover {
+		opacity: 0;
+		--btn-c: var(--color-white);
+    }
+}
+
+.btn--third {
+	--btn-px: 10px;
+    --btn-py: 5px;
+    --btn-bg: var(--color-blue);
+    --btn-bdc:  transparent;
+    --btn-bdrs: 32px;
+    --btn-c: var(--color-white);
+
+	&:hover {
+		opacity: 1;
+		--btn-c: var(--color-white);
+		--btn-bg: var(--color-d-blue);
+    }
+}

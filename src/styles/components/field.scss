@@ -1,0 +1,94 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.field {}
+
+.field__input {
+	input {
+		@include mixins.text-txt2;
+		text-transform: none;
+		width: 100%;
+		padding: 12px;
+		color: #2d2d2d;
+		background-color: var(--color-white);
+		border: none;
+		border-radius: 0;
+		outline: none;
+		transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+	}
+	input::placeholder {
+
+		opacity: 0.56;
+
+	}
+}
+
+.field__input--search {
+	position: relative;
+    text-align: left;
+
+	input {
+		padding: 12px 30px 12px 12px;
+		background-color:  var(--color-white);
+		border-radius: 8px;
+		border: 1px solid var(--color-gray); ;
+
+		
+		&:hover {
+			background-color:  #F1F5FF;
+		}
+
+		&:focus,
+		&:active {
+			background-color:  var(--color-white);
+			border: 1px solid var(--color-blue); ;
+		}
+	}
+
+	button:hover~input{
+		background-color: #F1F5FF;
+	}
+
+	button:hover~input:active,
+	button:hover~input:focus {
+		background-color:  var(--color-white);
+	}
+
+
+	button {
+		// pointer-events: none;
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		display: flex;
+		cursor: pointer;
+		transform: translateY(-50%);
+
+		&:hover {
+			opacity: 1;
+
+		}
+	}
+}
+
+.field__input--search:has(input:active),
+.field__input--search:has(input:focus) {
+	button {
+		svg path{
+			fill: var(--color-blue);
+		}
+	}
+}
+
+.field.has-value {
+	input {
+		background-color:  var(--color-white);
+		border: 1px solid var(--color-blue);
+	}
+
+	button {
+		svg path{
+			fill: var(--color-blue);
+		}
+	}
+}
