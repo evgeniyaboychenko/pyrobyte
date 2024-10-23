@@ -1,0 +1,33 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.about-us p {
+	@include mixins.text-txt;
+}
+
+.about-us__wrapper {
+	.about-us__etc {
+		display: inline-flex;
+		margin-left: 15px;
+	}
+
+}
+
+.about-us__wrapper.is-expanded {
+	.about-us__etc {
+		display: none;
+	}
+}
+
+.about-us__etc-text {
+
+    display: none;
+}
+
+.about-us__etc-text.is-expanded {
+    display: block;
+}
+
+.about-us__collapse {
+	margin-left: auto;
+}

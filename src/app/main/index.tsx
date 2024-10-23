@@ -1,6 +1,7 @@
 import Page from '../../components/page-layout';
 import Footer from '../../components/footer';
 import Header from '../../components/header';
+import AboutUs from '../../components/about-us';
 
 interface Props {
 	handleClose: (value: boolean) => void
@@ -12,7 +13,7 @@ function Main({...props}: Props) {
   return (
 		<Page
 		header={<Header handleClose={handleClose}/>}
-		main={<div>main</div>}
+		main={<AboutUs/>}
 		footer={<Footer/>}
 		/>
   );
