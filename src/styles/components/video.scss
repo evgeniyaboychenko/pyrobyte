@@ -1,0 +1,28 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.player-wrapper {
+	position: relative;
+	--aspect-ratio: 0.62;
+	border-radius: var(--radius);
+	height: 0;
+	padding-top: calc(var(--aspect-ratio) * 100%);
+  }
+  
+.react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.react-player__preview .react-player__icon {
+	transition: transform 0.3s ease-in-out;
+}
+
+.react-player__preview:hover .react-player__icon {
+	transform: scale(1.4);
+}
+
