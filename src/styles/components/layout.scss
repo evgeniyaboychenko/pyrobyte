@@ -1,7 +1,17 @@
+@use './../service/mixins';
+@use './../service/constants';
 .layout {
 	width: 100%;
 	max-width: 1366px;
 	margin: 0 auto;
     padding: 0 20px;
   }
+
+.layout--no-mobile {
+	@include mixins.maxBp(constants.$bp-768) {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+	}
+}
   

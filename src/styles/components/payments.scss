@@ -1,0 +1,18 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.payments {
+	margin-top: 95px;
+	margin-bottom: 95px;
+}
+
+.payments__slider {
+	display: flex;
+	justify-content: center;
+}
+
+.payments__link {
+	border-radius: 8px;
+	overflow: hidden;
+
+}

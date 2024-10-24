@@ -1,0 +1,133 @@
+//  @use 'swiper/scss';
+// @use 'swiper/scss/navigation';
+// @use 'swiper/scss/pagination';
+
+// @forward 'swiper/swiper.min.css';
+// @forward 'swiper/modules/pagination/pagination.min.css';
+
+
+// .swiper-button-prev {
+//     left: -36px;
+// }
+// .swiper-button-next {
+//     right: -36px;
+// }
+
+// @use 'swiper/scss';
+// @use 'swiper/scss/grid';
+
+// %swiper-button {
+//     --icon-height: 24px;
+//     --icon-color: #000;
+//     position: absolute;
+//     top: 50%;
+//     z-index: 1;
+//     padding: 0;
+//     cursor: pointer;
+//     visibility: hidden;
+//     background-color: transparent;
+//     border: none;
+//     transition: opacity var(--duration) ease-in-out,
+//         transform var(--duration) ease-in-out;
+//     transform: translateY(-50%);
+//     &:hover {
+//         transform: translateY(-50%) scale(1.2);
+//     }
+//     &:focus {
+//         outline: none;
+//     }
+//     &:focus-visible {
+//         transform: translateY(-50%) scale(1.2);
+//     }
+// }
+// .swiper-button-prev {
+//     @extend %swiper-button;
+//     left: -36px;
+// }
+// .swiper-button-next {
+//     @extend %swiper-button;
+//     right: -36px;
+// }
+// .swiper-initialized ~ .swiper-button-prev,
+// .swiper-initialized ~ .swiper-button-next {
+//     visibility: visible;
+// }
+// .swiper-button-disabled {
+//     cursor: auto;
+//     opacity: 0.6;
+//     &:hover {
+//         transform: translateY(-50%);
+//     }
+// }
+
+// .swiper-pagination {
+//     position: absolute;
+//     bottom: 12px;
+//     left: 50%;
+//     z-index: 1;
+//     display: grid;
+//     gap: 8px;
+//     visibility: hidden;
+//     transform: translateX(-50%);
+// }
+// .swiper-initialized .swiper-pagination {
+//     visibility: visible;
+// }
+// .swiper-pagination-horizontal {
+//     grid-auto-flow: column;
+// }
+
+// .swiper-pagination-bullet {
+//     width: 8px;
+//     height: 8px;
+//     background-color: #ccc;
+// }
+// .swiper-pagination-bullet-active {
+//     background-color: #000;
+// }
+
+@use './../service/mixins';
+@use './../service/constants';
+
+.swiper {
+	z-index: 0;
+}
+
+.swiper-slide {
+    text-align: center;
+}
+.swiper-button-prev {
+	left: 0;
+    right: auto;
+}
+.swiper-button-next {
+	left: auto;
+    right: 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+	color:  #1D253C;
+	width: auto;
+	@include mixins.maxBp(constants.$bp-768) {
+		display: none;
+	}
+
+	&::after {
+		font-size: 14px;
+	}
+}
+
+.swiper--our-partners {
+	.swiper-wrapper {
+		justify-content: space-between;
+	}
+
+	@include mixins.maxBp(constants.$bp-768) {
+		.swiper-slide:not(.swiper-slide-active) {
+			svg path {
+				fill:  #D7DFF2;
+				stroke: #D7DFF2;
+			}
+		}
+	}
+}

@@ -2,11 +2,12 @@ import { ReactNode } from "react";
 
 interface Props {
 	children?: ReactNode,
+  className?: string,
 }
 
-function Layout({ children }: Props) {
+function Layout({className='layout', children }: Props) {
   return (
-    <div className='layout'>
+    <div className={className}>
   	  {children}
     </div>
   );

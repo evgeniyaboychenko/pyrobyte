@@ -11,6 +11,7 @@ function AboutUs() {
   
   return (
     <section className='about-us'>
+		<h2  className='visually-hidden'></h2>
 		<Layout>
 			<div className={`about-us__wrapper ${classNameIsExpand}`}>
 				<p>Since 2019, LibertyWalk has successfully provided express courier delivery services in the city for both individuals and legal entities,
@@ -44,9 +45,6 @@ function AboutUs() {
 					unnecessary bureaucracy, negotiations and calls to the call center.</p>
 				<button type='button' className="about-us__collapse btn" onClick={()=>setExpanded(false)}>Collapse text</button>	
 			</div>
-
-				
-	
 		</Layout>
     </section>
   );

@@ -1,0 +1,58 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.our-partners {
+	margin-top: 95px;
+	margin-bottom: 95px;
+
+}
+
+.our-partners__head {
+	position: relative;
+	// display: flex;
+	// align-items: center;
+}
+
+.our-partners__title {
+	// justify-self: center;
+}
+
+.our-partners__collaborate {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate3d(0, -50%, 0);
+	padding: 8px 8px;
+	border-radius: 24px;
+	border: 1px solid #DDE7FD;
+
+	@include mixins.maxBp(constants.$bp-768) {
+		display: none; 
+	}
+}
+
+.our-partners__collaborate.our-partners__collaborate--mobile {
+	display: none;
+
+	@include mixins.maxBp(constants.$bp-768) {
+		position: relative;
+		transform: translate3d(0, 0, 0);
+		display: block;
+		text-align: center; 
+	}
+
+}
+
+.our-partners__slider {
+	display: flex;
+	justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+	.our-partners__link:not(:hover) {
+		svg path {
+			fill:  #D7DFF2;
+			stroke: #D7DFF2;
+		}
+	}
+}
