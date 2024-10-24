@@ -2,30 +2,42 @@
 @use './../service/constants';
 
 .our-partners {
-	margin-top: 95px;
-	margin-bottom: 95px;
+	margin-top: 80px;
+	margin-bottom: 46px;
 	background-color: var(--color-white);
+	--padding: 102px;
+	@include mixins.maxBp(constants.$bp-1280) {
+		--padding: 50px;
+	}
+
+	@include mixins.maxBp(constants.$bp-768) {
+		--padding: 20px;
+	}
+
 
 }
 
 .our-partners__head {
 	position: relative;
-	// display: flex;
-	// align-items: center;
+	margin-bottom: 80px;
 }
 
 .our-partners__title {
-	// justify-self: center;
+	@include mixins.text-h1;
 }
 
 .our-partners__collaborate {
+	@include mixins.text-txt;
 	position: absolute;
 	top: 50%;
 	right: 0;
 	transform: translate3d(0, -50%, 0);
-	padding: 8px 8px;
+	padding: 8px 16px;
 	border-radius: 24px;
 	border: 1px solid #DDE7FD;
+	display: flex;
+	align-items: center;
+	gap: 9px;
 
 	@include mixins.maxBp(constants.$bp-768) {
 		display: none; 
@@ -36,6 +48,7 @@
 	display: none;
 
 	@include mixins.maxBp(constants.$bp-768) {
+		margin-top: 20px;
 		position: relative;
 		transform: translate3d(0, 0, 0);
 		display: block;
@@ -47,6 +60,9 @@
 .our-partners__slider {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	min-width: fit-content;
+	height: 100%;
 }
 
 @media only screen and (min-width: 768px) {

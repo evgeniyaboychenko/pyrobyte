@@ -24,7 +24,7 @@ function OurPartners () {
 		breakPoints: {
 			768: {
 			spaceBetween: 10,
-			slidesPerView: 4,
+			slidesPerView: 3,
 			centeredSlides: false,
 			},
 			1280: {

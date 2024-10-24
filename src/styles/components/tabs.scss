@@ -1,0 +1,70 @@
+
+@use './../service/mixins';
+@use './../service/constants';
+
+.react-tabs__tab-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin: 0;
+    margin-bottom: 27px;
+    padding: 0;
+	border: none;
+	border-radius: 0;
+}
+
+.react-tabs__tab {
+	--padding-tab: 5px;
+	padding: var(--padding-tab);
+	position: static;
+	background-color:  #EFF4FF;
+	border-radius: 0;
+	border-top: 1px solid #B7C6E7;
+	border-left: 1px solid #B7C6E7;
+	border-bottom: 1px solid #B7C6E7;
+
+
+	&:hover .tab-inner{
+		opacity: 0.7;
+	}
+}
+
+.react-tabs__tab:first-child {
+	border-top-left-radius: var(--radius);
+	border-bottom-left-radius: var(--radius);
+}
+
+.react-tabs__tab:last-child {
+	border-top-right-radius: var(--radius);
+	border-bottom-right-radius: var(--radius);
+	border-right: 1px solid #B7C6E7;
+}
+
+.react-tabs__tab--selected {
+	padding: calc(var(--padding-tab) - 2px);
+	background-color: var(--color-white);
+	border: 2px solid var(--color-blue);
+	bottom: 0;
+}
+
+.react-tabs__tab--selected:last-child {
+	border-right: 2px solid var(--color-blue);
+}
+
+.tab-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.tab-inner__text {
+	font-size: 12px;
+	margin: 0;
+	opacity: 0.48;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.react-tabs__tab--selected .tab-inner__text {
+	opacity: 1;
+}

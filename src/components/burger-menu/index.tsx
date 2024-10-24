@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import './style.scss';
 import { navMobileList } from '../../data/header';
 import Field from '../field';
 
@@ -30,7 +29,7 @@ function BurgerMenu({...props}:Props) {
 						</svg>
 						<span>NY, Manhattan</span>
 				</button>
-				<form>
+				<form className='burger-menu__form'>
 					<Field classInput='field__input--search' value={value}>
 						<button type='submit' className="header__search-btn btn" aria-label='Отправить форму'>
 							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +56,7 @@ function BurgerMenu({...props}:Props) {
 			</div>
 
 			<div className="burger-menu__bottom">
-				<a href="#" className="btn btn--third">
+				<a href="#" className="btn btn--third btn--width-full">
 					Take a complex order
 				</a>
 			</div>

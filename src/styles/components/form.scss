@@ -7,23 +7,3 @@ form {
     }
 }
 
-// .form__hint {
-//     @extend %text-tiny;
-//     margin-top: var(--space-xs);
-//     color: #6b6b6b;
-// }
-
-// .form__columns {
-//     display: grid;
-//     grid-template-columns: 1fr 1fr;
-//     column-gap: 16px;
-// }
-
-// .form__btn-group {
-//     display: grid;
-//     grid-auto-flow: column;
-//     gap: 12px;
-//     @include maxBp($bp-668) {
-//         grid-auto-flow: row;
-//     }
-// }

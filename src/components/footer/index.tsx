@@ -61,8 +61,6 @@ function Footer() {
 			
 		</div>
 		<div className="footer__bottom">
-			
-
 			<div className="footer__bottom-title">
 				<span>
 					Made by

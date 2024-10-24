@@ -1,25 +1,46 @@
 @use './../service/mixins';
 @use './../service/constants';
 
-.field {}
+.field {
+	width: 100%;
+}
 
 .field__input {
+	width: 100%;
 	input {
 		@include mixins.text-txt2;
 		text-transform: none;
 		width: 100%;
-		padding: 12px;
+		padding: 0;
+		padding-bottom: 5px;
 		color: #2d2d2d;
 		background-color: var(--color-white);
 		border: none;
 		border-radius: 0;
 		outline: none;
 		transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+		border-bottom: 2px solid rgba(43, 107, 243, 0.16);
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		&:focus,
+		&:active {
+			opacity: 1;
+			border-bottom: 2px solid rgba(43, 107, 243, 1);
+		}
 	}
+
 	input::placeholder {
-
 		opacity: 0.56;
+	}
+}
 
+.field.has-value .field__input {
+	input {
+		opacity: 1;
+		border-bottom: 2px solid rgba(43, 107, 243, 1);
 	}
 }
 
@@ -28,18 +49,20 @@
     text-align: left;
 
 	input {
-		padding: 12px 30px 12px 12px;
+		padding: 8px 30px 8px 15px;
 		background-color:  var(--color-white);
 		border-radius: var(--radius);
 		border: 1px solid var(--color-gray); ;
 
 		
 		&:hover {
+			opacity: 1;
 			background-color:  #F1F5FF;
 		}
 
 		&:focus,
 		&:active {
+			opacity: 1;
 			background-color:  var(--color-white);
 			border: 1px solid var(--color-blue); ;
 		}
@@ -56,7 +79,6 @@
 
 
 	button {
-		// pointer-events: none;
 		position: absolute;
 		top: 50%;
 		right: 12px;
@@ -80,7 +102,7 @@
 	}
 }
 
-.field.has-value {
+.field.has-value .field__input--search {
 	input {
 		background-color:  var(--color-white);
 		border: 1px solid var(--color-blue);
@@ -92,3 +114,14 @@
 		}
 	}
 }
+
+.field__label {
+	font-family: var(--font-family-1);
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 16px;
+	font-weight: 700;
+	color:  #C4CEE5;
+}
+

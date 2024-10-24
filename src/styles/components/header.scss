@@ -2,7 +2,12 @@
 @use './../service/constants';
 
 .header {
-	
+	margin-top: 8px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid rgba(43, 107, 243, 0.16);	
+	@include mixins.maxBp(constants.$bp-1280) {
+		--padding: 10px;
+	}
 }
 
 .header__wrapper {
@@ -12,6 +17,18 @@
 	@include mixins.maxBp(constants.$bp-1280) {
 		display: none;
 	}
+}
+
+.header__wrap {
+	display: flex;
+	align-items: center;
+	gap: 67px;
+}
+
+
+.header__form-search {
+	max-width: 184px;
+
 }
 
 .header__wrapper--display-1280 {
@@ -25,7 +42,7 @@
 
 .header__location-btn {
 	display: flex;
-	gap : 10px;
+	gap : 9px;
 	align-items: center;
 
 	span {
@@ -45,12 +62,21 @@
 	border-bottom: 1px dashed  #C1CFEF;
 } 
 
+.main-nav {
+	@include mixins.text-txt;
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	margin-left: 45px;
+}
+
 .main-nav__list {
 	@include mixins.reset-list;
 	color: var(--color-d-gray);
 	display: flex;
-	gap: 24px;
+	gap: 36px;
 	flex-wrap: wrap;
+	align-items: center;
 }
 
 .main-nav__item {

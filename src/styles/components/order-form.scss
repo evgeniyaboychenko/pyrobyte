@@ -1,0 +1,42 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.order-form__wrap {
+	display: flex;
+	gap: 20px;
+	align-items: flex-end;
+}
+
+.order-form__wrap--pickup {
+	position: relative;
+	margin-bottom: 30px;
+	
+	&::before {
+		position: absolute;
+		bottom: -100%;
+		transform: translate3d(10px, 5px, 0);
+		left: 0;
+		width: 4px;
+		height: 52px;
+		content: '';
+		background-image: url('../../../src/assets/images/svg/circle.svg') ;
+		background-repeat: no-repeat;
+		z-index: 0;
+	}
+}
+.order-form__wrap--drop {
+	position: relative;
+}
+
+.order-form__reset-btn {
+	display: flex;
+	gap: 9px;
+
+}
+
+.order-form__btn-wrap {
+	margin-top: 43px;
+	display: flex;
+	flex-direction: column;
+	gap: 9px
+}

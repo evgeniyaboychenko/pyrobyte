@@ -2,9 +2,9 @@
 @use './../service/constants';
 .layout {
 	width: 100%;
-	max-width: 1366px;
+	max-width: var(--content-area);
 	margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--padding);
   }
 
 .layout--no-mobile {

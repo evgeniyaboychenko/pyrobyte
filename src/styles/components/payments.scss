@@ -3,7 +3,12 @@
 
 .payments {
 	margin-top: 95px;
-	margin-bottom: 95px;
+	margin-bottom: 82px;
+}
+
+.payments__title {
+	@include mixins.text-h1;
+	margin-bottom: 55px;;
 }
 
 .payments__slider {

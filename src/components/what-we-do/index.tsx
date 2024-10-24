@@ -1,7 +1,4 @@
-import { ReactNode } from "react";
 import Layout from '../layout';
-import Slider from '../slider';
-import { paymentsList } from '../../data/our-partners';
 import bgImage from '../../assets/images/png/pad.png'
 import bgImageSecond from '../../assets/images/png/Intersect.png'
 import {list} from '../../data/what-we-do'
@@ -13,7 +10,7 @@ function WhatWeDo () {
 		<img src={bgImage} className='what-we-do__bg'></img>
 		<img src={bgImageSecond} className='what-we-do__bg-second'></img>
 		<Layout>
-				<h2  className=''>What we do</h2>
+				<h2  className='what-we-do__title'>What we do</h2>
 				<p className='what-we-do__description'>Express courier service in the city. We are a reliable logistics partner for delivery services for online stores and restaurants!</p>
 				<ul className='what-we-do__list'>
 					{
@@ -43,7 +40,9 @@ function WhatWeDo () {
 					</li>
 					)}
 				</ul>
-		<button className='btn btn--secondary'>Get started!</button>				
+				<div className='what-we-do__btn'>
+					<a className='btn btn--secondary'>Get started!</a>	
+				</div>			
 		</Layout>
 	</section>
   );

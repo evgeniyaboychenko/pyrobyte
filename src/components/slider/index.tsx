@@ -1,11 +1,8 @@
 import { ReactNode } from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
-//  import "swiper/swiper.min.css";
-// import "swiper/scss";
-// import "swiper/modules";
+
 
 import "swiper/css";
 import 'swiper/css/navigation';
@@ -30,13 +27,6 @@ interface Props {
 }
 
 function Slider ({...props}: Props) {
-  // const {sliderList, className, sliderParameters = {
-  //   navigation: true,
-	// 	default: {
-	// 		spaceBetween: 10,
-	// 		slidesPerView: 6
-	// 	},
-  // }} = props;
   const {sliderList, className, sliderParameters } = props;
 
 
@@ -46,29 +36,11 @@ function Slider ({...props}: Props) {
     <Swiper
       navigation={sliderParameters.navigation} modules={[Navigation]} className={className}
       {...sliderParameters.default}
-      // spaceBetween={sliderParameters.default.spaceBetween}
-      // slidesPerView={sliderParameters.default.slidesPerView}
       breakpoints={
         breakPoints
       }
-      // breakpoints={{
-        // 768: {
-        //   slidesPerView: 6,
-        //   spaceBetween: 20,
-        // },
-        // 1024: {
-        //   slidesPerView: 6,
-        //   spaceBetween: 10,
-        // },
-      // }}
-      // onSlideChange={() => console.log('slide change')}
-      // onSwiper={(swiper) => console.log(swiper)}
     >
       {sliderList.map((slider,index)=> <SwiperSlide key={index}>{slider}</SwiperSlide>)}
-      {/* <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide> */}
     </Swiper>
   );
 };

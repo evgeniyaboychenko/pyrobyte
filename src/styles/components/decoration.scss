@@ -1,0 +1,42 @@
+@use './../service/mixins';
+@use './../service/constants';
+
+.decoration {
+	background-color: inherit;
+	position: relative;
+	z-index: 0;
+	color: var(--color-gray);
+	padding-bottom: 24px;
+
+	span {
+		position: absolute;
+		z-index: 1;
+		left: 50%;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		top: 50%;
+		right: 0;
+		height: 2px;
+		width: calc(50% - 50px);
+		background-color: var(--color-gray);
+		transform: translate3d( -0%, -50%, 0);
+		z-index: -1;
+	}
+
+	&::after {
+		position: absolute;
+		content: '';
+		top: 50%;
+		left: 0;
+		height: 2px;
+		width: calc(50% - 50px);
+		background-color: var(--color-gray);
+		transform: translate3d(-0%, -50%, 0);
+		z-index: -1;
+	} 
+}

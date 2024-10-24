@@ -3,8 +3,6 @@ import { navList } from '../../data/header';
 import logo from '../../assets/images/svg/logo-main.svg'
 import Layout from '../layout';
 import Field from '../field';
-// import BurgerMenu from '../burger-menu';
-
 
 interface Props {
 	handleClose: (value: boolean) => void
@@ -19,18 +17,20 @@ function Header({...props}: Props) {
     <header className="header">
 		<Layout>
 			<div className="header__wrapper">
-				<a className="header__logo" href="#" aria-label="На главную">
-				<img src={logo} width="192" height="64" alt="Whoosh" />
-				</a>
-				<button type='button' className="header__location-btn btn">
-					<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M11 6C11 6.57825 10.721 7.43892 10.1734 8.50282C9.6424 9.53439 8.92352 10.6362 8.18814 11.6588C7.45537 12.6777 6.72044 13.5984 6.1676 14.2653C6.10961 14.3353 6.05367 14.4024 6 14.4665C5.94633 14.4024 5.89039 14.3353 5.8324 14.2653C5.27956 13.5984 4.54463 12.6777 3.81186 11.6588C3.07648 10.6362 2.3576 9.53439 1.82663 8.50282C1.27902 7.43892 1 6.57825 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z" stroke="#C2D2F4" strokeWidth="2"/>
-						<path d="M11 6C11 6.57825 10.721 7.43892 10.1734 8.50282C9.6424 9.53439 8.92352 10.6362 8.18814 11.6588C7.45537 12.6777 6.72044 13.5984 6.1676 14.2653C6.10961 14.3353 6.05367 14.4024 6 14.4665C5.94633 14.4024 5.89039 14.3353 5.8324 14.2653C5.27956 13.5984 4.54463 12.6777 3.81186 11.6588C3.07648 10.6362 2.3576 9.53439 1.82663 8.50282C1.27902 7.43892 1 6.57825 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z" stroke="#B7C6E7" strokeWidth="2"/>
-					</svg>
-					<span>NY, Manhattan</span>
-				</button>
+				<div className="header__wrap">
+					<a className="header__logo" href="#" aria-label="На главную">
+					<img src={logo} width="192" height="64" alt="Whoosh" />
+					</a>
+					<button type='button' className="header__location-btn btn">
+						<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11 6C11 6.57825 10.721 7.43892 10.1734 8.50282C9.6424 9.53439 8.92352 10.6362 8.18814 11.6588C7.45537 12.6777 6.72044 13.5984 6.1676 14.2653C6.10961 14.3353 6.05367 14.4024 6 14.4665C5.94633 14.4024 5.89039 14.3353 5.8324 14.2653C5.27956 13.5984 4.54463 12.6777 3.81186 11.6588C3.07648 10.6362 2.3576 9.53439 1.82663 8.50282C1.27902 7.43892 1 6.57825 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z" stroke="#C2D2F4" strokeWidth="2"/>
+							<path d="M11 6C11 6.57825 10.721 7.43892 10.1734 8.50282C9.6424 9.53439 8.92352 10.6362 8.18814 11.6588C7.45537 12.6777 6.72044 13.5984 6.1676 14.2653C6.10961 14.3353 6.05367 14.4024 6 14.4665C5.94633 14.4024 5.89039 14.3353 5.8324 14.2653C5.27956 13.5984 4.54463 12.6777 3.81186 11.6588C3.07648 10.6362 2.3576 9.53439 1.82663 8.50282C1.27902 7.43892 1 6.57825 1 6C1 3.23858 3.23858 1 6 1C8.76142 1 11 3.23858 11 6Z" stroke="#B7C6E7" strokeWidth="2"/>
+						</svg>
+						<span>NY, Manhattan</span>
+					</button>
+				</div>
 
-				<form>
+				<form className="header__form-search">
 					<Field classInput='field__input--search' value={value}>
 						<button type='submit' className="header__search-btn btn" aria-label='Отправить форму'>
 							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,13 +53,14 @@ function Header({...props}: Props) {
 							</li>
 						)}
 					</ul>
+					<button type='button' className="header__login btn"  aria-label="Войти">
+						<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect width="40" height="40" rx="20" fill="#2B6BF3"/>
+						<path fillRule="evenodd" clipRule="evenodd" d="M20 14C18.0276 14 16 15.6789 16 17.75V19H15.7143C15.3198 19 15 19.3358 15 19.75V25.25C15 25.6642 15.3198 26 15.7143 26H24.2857C24.6802 26 25 25.6642 25 25.25V19.75C25 19.3358 24.6802 19 24.2857 19H24V17.75C24 15.6789 21.9724 14 20 14ZM20 16C18.8165 16 18 17 18 17.75V19H22V17.75C22 17 21.1835 16 20 16Z" fill="white"/>
+						</svg>
+					</button>
 				</nav>
-				<button type='button' className="header__login btn"  aria-label="Войти">
-					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<rect width="40" height="40" rx="20" fill="#2B6BF3"/>
-					<path fillRule="evenodd" clipRule="evenodd" d="M20 14C18.0276 14 16 15.6789 16 17.75V19H15.7143C15.3198 19 15 19.3358 15 19.75V25.25C15 25.6642 15.3198 26 15.7143 26H24.2857C24.6802 26 25 25.6642 25 25.25V19.75C25 19.3358 24.6802 19 24.2857 19H24V17.75C24 15.6789 21.9724 14 20 14ZM20 16C18.8165 16 18 17 18 17.75V19H22V17.75C22 17 21.1835 16 20 16Z" fill="white"/>
-					</svg>
-				</button>
+				
 			</div>
 
 			{/* mobile version */}

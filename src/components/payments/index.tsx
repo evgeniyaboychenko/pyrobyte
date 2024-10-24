@@ -31,10 +31,10 @@ function Payments () {
   return (
 	<section className='payments'>
 		<Layout>
-			<h2  className=''>Payment methods</h2>
+			<h2  className='payments__title'>Payment methods</h2>
 		</Layout>
 		<Layout className="layout layout--no-mobile">
-			<Slider sliderList={sliderList} sliderParameters={sliderParameters}>
+			<Slider sliderList={sliderList} className={'swiper--payments'} sliderParameters={sliderParameters}>
 			</Slider>
 		</Layout>
 

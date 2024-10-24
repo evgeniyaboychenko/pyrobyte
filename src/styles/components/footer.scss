@@ -2,7 +2,9 @@
 @use './../service/constants';
 
 .footer{
-	padding: 20px;
+	--padding: 103px;
+	padding-top: 69px;
+	padding-bottom: 30px;
 	position: relative;
 	background-color: var(--page-bc-gray);
 	&::before {
@@ -13,7 +15,9 @@
 		height: 2px;
 		width: 100%;
 		background: linear-gradient(0deg, #C2D2F4, #C2D2F4), linear-gradient(0deg, #B7C6E7, #B7C6E7);
-		// border: 1px solid rgba(43, 107, 243, 1)
+	}
+	@include mixins.maxBp(constants.$bp-768) {
+		--padding: 20px;
 	}
 }
 
@@ -30,10 +34,8 @@
 							"copyright"
 							"decoration"
 							"author";
-							
-		// flex-direction: column;
+
 		gap: 20px;
-		// align-items: flex-start;
 	}
 }
 
@@ -52,16 +54,9 @@
 		left: 50%;
 		top: 50%;
 		transform: translate3d(-50%, -50%, 0);
-		background-color: var(--page-bc);
+		background-color: var(--page-bc-gray);
 		padding-left: 8px;
 		padding-right: 8px;
-
-		// @include mixins.maxBp(constants.$bp-768) {
-		// 	left: 0;
-		// 	transform: translate3d(0, -50%, 0);
-		// 	padding-left: 0;
-		// 	padding-right: 8px;
-		// }
 	}
 
 	&::after {
@@ -87,7 +82,7 @@
 	justify-self: center;
 	@include mixins.text-txt2;
 	@include mixins.maxBp(constants.$bp-768) {
-		justify-self: start;
+		justify-self: center;
 	}
 
 }
@@ -98,7 +93,7 @@
 	justify-self: center;
 	@include mixins.maxBp(constants.$bp-768) {
 		width: 64px;
-		justify-self: start;
+		justify-self: center;
 	}
 }
 
@@ -110,18 +105,20 @@
 	align-items: center;;
 	justify-self: center;
 	@include mixins.maxBp(constants.$bp-768) {
-		justify-self: start;
+		justify-self: center;
 	}
 }
 
 .footer__top {
 	display: grid;
-	grid-template-columns:240px 200px 200px 232px ;
+	grid-template-columns: 294px 205px 205px 261px;
 	grid-template-areas: "about menu services contact";
-	gap: 20px;
+	gap: 10px;
 	justify-content: space-between;
+	margin-bottom: 26px;
 
 	@include mixins.maxBp(constants.$bp-1024) {
+		grid-template-columns:1fr 1fr ;
 		grid-template-areas:"about about"
 							"menu services"
 							"contact contact";
@@ -131,7 +128,8 @@
 
 .footer__title {
 	@include mixins.text-subtitle;
-	padding-bottom: 9px;
+	padding-bottom: 14px;
+	margin-bottom: 17px;
 	max-width: 200px;
 	text-align: left;
 
@@ -171,6 +169,15 @@
 	display: flex;
 	gap: 24px;
 	flex-wrap: wrap;
+
+	@include mixins.maxBp(constants.$bp-1024) {
+		max-width: 320px;
+		justify-content: space-between;
+	}
+}
+
+.footer__social-list li:hover {
+	opacity: 0.7;
 }
 
 .footer__phone {
@@ -188,7 +195,7 @@
 	@include mixins.reset-list;
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: 8px;
 }
 
 .footer__about {
@@ -216,7 +223,7 @@
 	gap: 10px;
 	max-width: 210px;
 	line-height: var(--line-height);
-	margin-bottom: 30px;
+	margin-bottom: 65px;
 
 	svg {
 		min-width: 12px;

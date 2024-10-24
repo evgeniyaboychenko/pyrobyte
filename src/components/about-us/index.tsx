@@ -1,8 +1,5 @@
 import { useState } from 'react';
-// import { navList } from '../../data/header';
-// import logo from '../../assets/images/svg/logo-main.svg'
 import Layout from '../layout';
-// import Field from '../field';
 
 
 function AboutUs() {

@@ -1,8 +1,21 @@
 @use './../service/mixins';
 @use './../service/constants';
 
+.about-us {
+	margin-top: 85px;
+	// padding-top: 13px;
+	// padding-bottom: 30px;
+	margin-bottom: 85px;
+	--padding: 103px;
+	@include mixins.maxBp(constants.$bp-768) {
+		--padding: 20px;
+	}
+}
+
 .about-us p {
 	@include mixins.text-txt;
+	margin-top: 22px;
+	margin-bottom: 22px;
 }
 
 .about-us__wrapper {

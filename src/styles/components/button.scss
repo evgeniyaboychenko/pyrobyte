@@ -2,14 +2,19 @@
 @use './../service/constants';
 
 .btn {
-	--btn-px: 0;
-    --btn-py: 0;
+	--btn-px: 5px;
+    --btn-py: 5px;
     --btn-bg: transparent;
     --btn-bdc:  transparent;
     --btn-bdrs: 0;
     --btn-c: #999999;
 
-    @include mixins.text-txt;
+    font-family: var(--font-family-1);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 34px;
+    text-transform: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -29,10 +34,16 @@
 }
 
 .btn--reset {
+    @include mixins.text-txt;
 	border: none;
 	border-radius: 0;
 	background-color: transparent;
 	color: inherit;
+   
+}
+
+.btn--width-full {
+	width: 100%;
 }
 
 .btn--secondary {
@@ -51,7 +62,7 @@
 
 .btn--third {
 	--btn-px: 10px;
-    --btn-py: 5px;
+    --btn-py: 8px;
     --btn-bg: var(--color-blue);
     --btn-bdc:  transparent;
     --btn-bdrs: 32px;
