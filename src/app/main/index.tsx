@@ -4,6 +4,7 @@ import Header from '../../components/header';
 import AboutUs from '../../components/about-us';
 import Payments from '../../components/payments';
 import OurPartners from '../../components/our-partners';
+import WhatWeDo from '../../components/what-we-do';
 
 interface Props {
 	handleClose: (value: boolean) => void
@@ -18,6 +19,7 @@ function Main({...props}: Props) {
 		main={
 			<>	
 				<OurPartners/>
+				<WhatWeDo/>
 				<Payments/>
 				<AboutUs/>
 

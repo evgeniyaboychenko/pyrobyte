@@ -4,6 +4,7 @@
 .footer{
 	padding: 20px;
 	position: relative;
+	background-color: var(--page-bc-gray);
 	&::before {
 		position: absolute;
 		content: "";
