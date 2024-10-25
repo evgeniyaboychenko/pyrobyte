@@ -8,6 +8,7 @@ body {
 	color: var(--color-black);
 	background-color: var(--page-bc);
 	@include mixins.text-txt2;
+	overflow-x: hidden;
 }
 
 a {

@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Intro';
     src: local('Intro-Bold'),
-        url('src/assets/fonts/subset-Intro-Bold.woff2') format('woff2');
+        url('/src/assets/fonts/subset-Intro-Bold.woff2') format('woff2');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
     font-family: 'Intro Book';
     src: local('Intro-Book-Italic'),
-        url('src/assets/fonts/subset-Intro-Book-Italic.woff2') format('woff2');
+        url('/src/assets/fonts/subset-Intro-Book-Italic.woff2') format('woff2');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
@@ -19,7 +19,7 @@
 @font-face {
     font-family: 'Intro Book';
     src: local('Intro-Book'),
-        url('src/assets/fonts/subset-Intro-Book.woff2') format('woff2');
+        url('/src/assets/fonts/subset-Intro-Book.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -28,7 +28,7 @@
 @font-face {
     font-family: 'Intro';
     src: local('Intro-Light'),
-        url('src/assets/fonts/subset-Intro-Light.woff2') format('woff2');
+        url('/src/assets/fonts/subset-Intro-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -37,7 +37,7 @@
 @font-face {
     font-family: 'Intro';
     src: local('Intro-Regular'),
-        url('src/assets/fonts/subset-Intro-Regular.woff2') format('woff2');
+        url('/src/assets/fonts/subset-Intro-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
